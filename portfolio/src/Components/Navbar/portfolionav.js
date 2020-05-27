@@ -1,36 +1,20 @@
-import React, { Component } from 'react';
-import DrawerToggleButton from '../../DrawerToggleButton';
+import React from 'react';
+import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import './portfolionav.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
-  } from 'reactstrap';
 
-class PortfolioNav extends Component {
-    state = {  }
-    render() { 
-
-      
-
-        return ( 
-            
+      const portfolionav = props => (
         <header className = "navbar">
-            <Navbar className = "navigation">
+            <nav className = "navigation">
                 <div>
-                    <DrawerToggleButton />
+                    <DrawerToggleButton 
+                    click = {props.drawerClickHandler}
+                    isOpen = {props.open}
+                    />
+                    
                 </div>
-                <div className = "nav_logo"><a href="/">JO</a></div>
+                <div className = "nav_logo"><a href="/">Juan Orta</a></div>
+                <div className="spacer"> </div>
                 <div className = "nav_items">
                   <ul>
                         <li> <a href="/"> Stack</a></li> 
@@ -39,10 +23,9 @@ class PortfolioNav extends Component {
                         <li> <a href="/"> Resume</a></li>
                   </ul>
                 </div>
-            </Navbar>
+            </nav>
           </header>
         );
-    }
-}
+
  
-export default PortfolioNav;
+export default portfolionav;
