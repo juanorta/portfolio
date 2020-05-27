@@ -60,3 +60,8 @@
     text-decoration: none;
 }
 
+@media(min-width: 769px){
+    .side-drawer{
+        display: none;
+    }
+}

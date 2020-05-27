@@ -31,10 +31,11 @@ class App extends Component {
     console.log('backdrop ' + this.state.sideDrawerOpen);
   }
 
+  /*
   exitButtonHandler = () => {
     console.log('button clicked');
   }
-
+*/
   render() { 
     console.log(this.state.sideDrawerOpen);
     //variables used to send 'click' and 'close' to other components
@@ -59,8 +60,8 @@ class App extends Component {
       <div style={{height: '100%'}}>
          
          <PortfolioNav 
-         drawerClickHandler = {this.drawerToggleClickHandler}
-         open = {this.state.sideDrawerOpen}
+          drawerClickHandler = {this.drawerToggleClickHandler}
+          open = {this.state.sideDrawerOpen}
          />
          <SideDrawer show = {this.state.sideDrawerOpen}/>
          
@@ -70,7 +71,7 @@ class App extends Component {
          
          
           <main style = {{marginTop: '64px'},{textAlign: 'center'}}>
-              <h1>Hi, my name is Juan Orta</h1>
+              <h1 style={{marginTop: '19rem'}}>Hi, my name is Juan Orta</h1>
               <h2>Full-stack engineer </h2>
           </main>
       </div>

@@ -22,7 +22,6 @@
 }
 
 .nav_logo a{
-    margin-left: 0.25rem;
     padding: 0.5rem 1rem;
     position: absolute;
     left: 0;
@@ -44,10 +43,7 @@
     list-style: none;
     margin:0;
     padding: 0;
-    padding-left: 9rem;
     display: flex;
-    padding-right: 2rem;
-    
 }
 
 .nav_items li{
@@ -68,4 +64,16 @@
 
 .nav_items a:active{
     color: lightseagreen;
+}
+
+@media(max-width: 768px){
+    .nav_items{
+        display: none;
+    }
+}
+
+@media (min-width: 769px){
+    .toggle{
+        display: none;
+    }
 }

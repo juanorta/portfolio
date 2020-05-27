@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
       const portfolionav = props => (
         <header className = "navbar">
             <nav className = "navigation">
-                <div>
+                <div className = "toggle">
                     <DrawerToggleButton 
                     click = {props.drawerClickHandler}
                     isOpen = {props.open}
