@@ -1,0 +1,10 @@
+.stack-header{
+    height: 100vh;
+    text-align: center;
+    background: rgb(19, 25, 29);
+}
+
+.stack-header h2 {
+    padding-top: 5rem;
+    color: aqua;
+}

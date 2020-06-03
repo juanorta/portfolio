@@ -1,0 +1,21 @@
+.intro{
+    height: 100vh;
+    text-align: center;
+    background: rgb(19, 25, 29);
+    margin-top: -3.5rem;
+}
+
+.intro h1{
+    padding-top: 32rem;
+    color: aqua;
+}
+
+.intro h3{
+    color: aqua;
+}
+
+@media(max-width: 768px){
+    .intro h1{
+        padding-top: 15rem;
+    }
+}

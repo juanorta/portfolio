@@ -4,8 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SideDrawer from './SideDrawer/SideDrawer';
 import DrawerToggleButton from './SideDrawer/DrawerToggleButton';
 import Backdrop from './Backdrop/Backdrop';
-import DrawerExitButton from './SideDrawer/DrawerExitButton.js';
 import drawerToggleButton from './SideDrawer/DrawerToggleButton';
+import Home from './PageSections/Home/Home'
+import Stack from './PageSections/Stack/Stack';
+import Projects from './PageSections/Projects/Projects';
+import Contact from './PageSections/Contact/Contact';
+import ScrollArrow from './ScrollArrow/ScrollArrow';
+
 
 class App extends Component {
   state = { 
@@ -58,22 +63,22 @@ class App extends Component {
       
       
       <div style={{height: '100%'}}>
+        
          
          <PortfolioNav 
           drawerClickHandler = {this.drawerToggleClickHandler}
           open = {this.state.sideDrawerOpen}
          />
          <SideDrawer show = {this.state.sideDrawerOpen}/>
-         
+         <ScrollArrow/>
          {backdrop}
          
          
-         
-         
-          <main style = {{marginTop: '64px'},{textAlign: 'center'}}>
-              <h1 style={{marginTop: '19rem'}}>Hi, my name is Juan Orta</h1>
-              <h2>Full-stack engineer </h2>
-          </main>
+  
+          <Home/>
+          <Stack/>
+          <Projects/>
+          <Contact/>
       </div>
      );
   }

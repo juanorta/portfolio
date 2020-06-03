@@ -3,19 +3,19 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(13, 39, 53);
+    background-color:transparent;
     height: 55px;
     
 }
 
 .navigation{
+    position: fixed;
     display: flex;
-    position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(1, 39, 53);
+    background-color: transparent;
     height: 55px;
     padding: 0 1rem;
     align-items: center;
@@ -27,12 +27,13 @@
     left: 0;
     top: 0;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     
 }
 
 .nav_logo a:hover{
-    color: green;
+    color: aqua;
+    text-decoration: none;
 }
 
 .spacer {
@@ -53,17 +54,18 @@
     
 }
 
+
 .nav_items a{
     color: white;
 }
 
 .nav_items a:hover{
-    color: lightseagreen;
+    color: aqua;
     text-decoration: none;
 }
 
-.nav_items a:active{
-    color: lightseagreen;
+.navbar > .active{
+    border-bottom: 5px solid white;
 }
 
 @media(max-width: 768px){

@@ -1,6 +1,6 @@
  import React from 'react';
  import './SideDrawer.css';
- import DrawerExitButton from '../SideDrawer/DrawerExitButton';
+ import { Link, animateScroll as scroll } from "react-scroll";
 import DrawerToggleButton from './DrawerToggleButton';
  const sideDrawer = props => {
     
@@ -12,12 +12,47 @@ import DrawerToggleButton from './DrawerToggleButton';
     return(
         <nav className = {drawerClasses}>
         
-         <ul>
-             <li><a href="/"> Stack</a></li>
-             <li><a href="/"> Projects</a></li>
-             <li><a href="/"> Contact Me</a></li>
-             <li><a href="/"> Resume</a></li>
-         </ul>
+        <ul>
+                    <li>
+                      <Link
+                      activeClass="active"
+                      to="stack"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
+                      >
+                      <a href="/">Stack</a>
+                      </Link>     
+                    </li>
+
+                      <li>
+                        <Link
+                        activeClass="active"
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={500}
+                        >
+                        <a href="/">Projects</a>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link
+                        activeClass="active"
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={500}
+                        >
+                        <a href="/">Contact Me</a>
+                        </Link>
+                      </li>
+                      <li className = "resume"> <a href="/"> Resume</a></li>
+                  </ul>
      </nav>
     );
  };
