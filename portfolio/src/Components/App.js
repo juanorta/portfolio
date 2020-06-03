@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PortfolioNav from './Navbar/portfolionav';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import SideDrawer from './SideDrawer/SideDrawer';
 import DrawerToggleButton from './SideDrawer/DrawerToggleButton';
 import Backdrop from './Backdrop/Backdrop';
@@ -36,16 +35,19 @@ class App extends Component {
     console.log('backdrop ' + this.state.sideDrawerOpen);
   }
 
-  /*
-  exitButtonHandler = () => {
+  
+  //closes side drawer when link is selected
+  sideDrawerClickHandler = () => {
     console.log('button clicked');
+    this.setState({sideDrawerOpen: false});
   }
-*/
+
   render() { 
     console.log(this.state.sideDrawerOpen);
     //variables used to send 'click' and 'close' to other components
     let sideDrawerExitButton;
     let backdrop;
+    let sideDrawerClick;
     
     
 
@@ -68,8 +70,11 @@ class App extends Component {
          <PortfolioNav 
           drawerClickHandler = {this.drawerToggleClickHandler}
           open = {this.state.sideDrawerOpen}
+          scrollTop = {ScrollArrow}
          />
-         <SideDrawer show = {this.state.sideDrawerOpen}/>
+         <SideDrawer 
+         sideDrawerClick = {this.sideDrawerClickHandler}
+         show = {this.state.sideDrawerOpen}/>
          <ScrollArrow/>
          {backdrop}
          

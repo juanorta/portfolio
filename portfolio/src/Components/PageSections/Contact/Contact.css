@@ -1,7 +1,9 @@
 .contact-header{
-    height: 75vh;
-    background: rgb(19, 25, 29);
+    height: 100vh;
+    background: rgb(9, 13, 15);
     text-align: center;
+    
+   
 }
 
 .contact-header h2{

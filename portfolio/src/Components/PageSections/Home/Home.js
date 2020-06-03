@@ -8,8 +8,8 @@ class Home extends Component {
 
         return ( 
             <div className="intro">
-                <h1>Hi, I'm Juan Orta</h1>
-                <h3>Full Stack Developer</h3>
+                <h1>Hi, I'm Juan</h1>
+                <h3>Full Stack Software Engineer</h3>
             </div>
          );
     }

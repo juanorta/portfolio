@@ -1,21 +1,29 @@
 .intro{
-    height: 100vh;
+    height: 105vh;
     text-align: center;
-    background: rgb(19, 25, 29);
+    background: rgb(9, 13, 15);
     margin-top: -3.5rem;
+    
 }
 
 .intro h1{
-    padding-top: 32rem;
+    font-size: 4rem;
+    padding-top: 38rem;
     color: aqua;
 }
 
 .intro h3{
+    font-size: 2rem;
     color: aqua;
 }
 
 @media(max-width: 768px){
     .intro h1{
-        padding-top: 15rem;
+        padding-top: 20rem;
+        font-size: 3rem;
+    }
+
+    .intro h3{
+        font-size: 1.5rem;
     }
 }

@@ -18,9 +18,9 @@
 }
 
 .side-drawer{
-    height: 50%;
+    height: 100%;
     background: transparent;
-    box-shadow: 2px 0px 5px rgba(0, 0,0, 0.5);
+    
     position: fixed;
     top: 20;
     right: 0;
@@ -28,12 +28,15 @@
     max-width: 400px;
     z-index: 200;
     transform: translateX(100%);
-    transition: .4s
+    transition: .4s;
+    margin-top: 6.5rem;
 }
 
 .side-drawer.open{
+    height: 17rem;
+    margin-top: 6.5rem;
     transform: translateX(0%);
-    background: rgb(19, 25, 29);
+    background: rgb(9, 13, 15);
 }
 
 
@@ -64,8 +67,16 @@
     text-decoration: none;
 }
 
+
+
 @media(min-width: 769px){
     .side-drawer{
         display: none;
+    }
+}
+
+@media(max-width: 768px){
+    .side-drawer{
+        height: auto !important;
     }
 }

@@ -14,7 +14,7 @@ import DrawerToggleButton from './DrawerToggleButton';
         
         <ul>
                     <li>
-                      <Link
+                      <Link onClick = {props.sideDrawerClick}
                       activeClass="active"
                       to="stack"
                       spy={true}
@@ -22,12 +22,12 @@ import DrawerToggleButton from './DrawerToggleButton';
                       offset={0}
                       duration={500}
                       >
-                      <a href="/">Stack</a>
+                      <a href="/">Skills</a>
                       </Link>     
                     </li>
 
                       <li>
-                        <Link
+                        <Link onClick = {props.sideDrawerClick}
                         activeClass="active"
                         to="projects"
                         spy={true}
@@ -40,7 +40,7 @@ import DrawerToggleButton from './DrawerToggleButton';
                       </li>
 
                       <li>
-                        <Link
+                        <Link onClick = {props.sideDrawerClick}
                         activeClass="active"
                         to="contact"
                         spy={true}

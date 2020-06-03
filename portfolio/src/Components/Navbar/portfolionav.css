@@ -40,11 +40,14 @@
     flex: 1;
 }
 
-.nav_items ul{
+.nav_items{
     list-style: none;
     margin:0;
     padding: 0;
     display: flex;
+    padding: 0 0.5rem;
+    top: 0;
+    right: 0;
 }
 
 .nav_items li{
@@ -55,17 +58,14 @@
 }
 
 
-.nav_items a{
+.nav_items {
     color: white;
+    cursor: pointer;
 }
 
-.nav_items a:hover{
+.nav_items :hover{
     color: aqua;
     text-decoration: none;
-}
-
-.navbar > .active{
-    border-bottom: 5px solid white;
 }
 
 @media(max-width: 768px){
@@ -78,4 +78,8 @@
     .toggle{
         display: none;
     }
+}
+
+.nav_items  > .active{
+    color: aqua;
 }

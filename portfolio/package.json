@@ -20,6 +20,7 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
+    "deploy-production": "react-scripts build && scp -r ./build/* juan@192.81.212.43:/var/www/juanorta.com/html",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
