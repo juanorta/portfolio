@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {FaArrowCircleUp} from 'react-icons/fa';
+import {FaArrowCircleUp, FaChevronDown} from 'react-icons/fa';
 import { Link, animateScroll as scroll } from "react-scroll";
 import './ScrollArrow.css';
 

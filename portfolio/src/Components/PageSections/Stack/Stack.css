@@ -10,3 +10,9 @@
     padding-top: 5rem;
     color: aqua;
 }
+
+@media(max-width: 768px){
+    .stack-header{
+        margin-top: -3rem;
+    }
+}

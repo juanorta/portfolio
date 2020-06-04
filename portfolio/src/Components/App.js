@@ -9,6 +9,8 @@ import Stack from './PageSections/Stack/Stack';
 import Projects from './PageSections/Projects/Projects';
 import Contact from './PageSections/Contact/Contact';
 import ScrollArrow from './ScrollArrow/ScrollArrow';
+import ScrollNext from './ScrollNext/ScrollNext';
+import StickyLinks from './StickyLinks/StickyLinks';
 
 
 class App extends Component {
@@ -75,12 +77,14 @@ class App extends Component {
          <SideDrawer 
          sideDrawerClick = {this.sideDrawerClickHandler}
          show = {this.state.sideDrawerOpen}/>
+         <StickyLinks/>
          <ScrollArrow/>
          {backdrop}
          
          
   
           <Home/>
+          <ScrollNext/>
           <Stack/>
           <Projects/>
           <Contact/>

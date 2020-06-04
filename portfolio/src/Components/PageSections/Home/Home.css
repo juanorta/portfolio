@@ -8,7 +8,7 @@
 
 .intro h1{
     font-size: 4rem;
-    padding-top: 38rem;
+    padding-top: 35rem;
     color: aqua;
 }
 
@@ -16,6 +16,8 @@
     font-size: 2rem;
     color: aqua;
 }
+
+
 
 @media(max-width: 768px){
     .intro h1{
