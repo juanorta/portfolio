@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 import ScrollNext from '/Users/mac/Desktop/jobPortfolio/portfolio/src/Components/ScrollArrow/ScrollArrow';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Home extends Component {
     state = {  }
