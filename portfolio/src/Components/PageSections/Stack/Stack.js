@@ -163,7 +163,7 @@ class Stack extends Component {
 					<Grid item lg={3} sm={9} xs={9}>
 						<Card
 							className="card"
-							style={{ backgroundColor: 'rgb(9, 13, 15)' }}
+							style={{ backgroundColor: 'transparent' }}
 						>
 							<CardContent className="card-content">
 								<div className="card-title">Cloud Server</div>
