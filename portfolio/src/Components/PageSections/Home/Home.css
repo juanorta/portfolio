@@ -1,45 +1,44 @@
-.intro{
-    width: 100%;
-    height: 105vh;
-    text-align: center;
-    background: rgb(9, 13, 15);
-    margin-top: -3.5rem;
-   
-    
+.intro {
+	width: 100%;
+	height: 105vh;
+	text-align: center;
+	background: rgb(9, 13, 15);
+	margin-top: -3.5rem;
 }
 
-.intro h1{
-    margin-top: auto;
-    font-size: 4rem;
-    color: aqua;
-    position: relative;
-    top: 50%;
-    left: 50%;
-  
-    transform: translate(-50%, -50%);
+.intro h1 {
+	margin-top: auto;
+	font-size: 4rem;
+	color: aqua;
+	position: relative;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
 }
 
-.intro h3{
-    font-size: 2rem;
-    color: aqua;
-    position: relative;
-    top: 49%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.intro h3 {
+	font-size: 2rem;
+	color: aqua;
+	position: relative;
+	top: 49%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
+@media (max-width: 768px) {
+	.intro {
+		height: 100vh;
+	}
 
+	.intro h1 {
+		top: 35%;
+		font-size: 3rem;
+		transform: translate(-50%, -50%);
+	}
 
-@media(max-width: 768px){
-    .intro h1{
-        top:35%;
-        font-size: 3rem;
-        transform: translate(-50%, -50%);
-        
-    }
-
-    .intro h3{
-       top: 35%;
-        font-size: 1.5rem;
-    }
+	.intro h3 {
+		top: 35%;
+		font-size: 1.5rem;
+	}
 }

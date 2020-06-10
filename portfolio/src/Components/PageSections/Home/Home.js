@@ -4,18 +4,15 @@ import ScrollNext from '/Users/mac/Desktop/jobPortfolio/portfolio/src/Components
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Home extends Component {
-    state = {  }
-    render() { 
-
-
-        return ( 
-            <div className="intro">
-                <h1>Hi, I'm Juan</h1>
-                <h3>Full Stack Software Engineer</h3>
-                
-            </div>
-         );
-    }
+	state = {};
+	render() {
+		return (
+			<div className='intro'>
+				<h1>Hi, I'm Juan</h1>
+				<h3>Full Stack Software Engineer</h3>
+			</div>
+		);
+	}
 }
- 
+
 export default Home;

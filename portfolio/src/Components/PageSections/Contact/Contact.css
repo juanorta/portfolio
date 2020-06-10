@@ -1,12 +1,10 @@
-.contact-header{
+.contact-header {
     height: 100vh;
     background: rgb(9, 13, 15);
     text-align: center;
-    
-   
 }
 
-.contact-header h2{
+.contact-header h2 {
     padding-top: 5rem;
     color: aqua;
 }

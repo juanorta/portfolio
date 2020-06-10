@@ -1,64 +1,59 @@
- .toggle-button{
-     position: absolute;
-     display: flex;
-     top: 1rem;
-     right: 1rem;
-     flex-direction: column;
-     justify-content: space-around;
-     height: 25px;
-     width: 30px;
-     background: transparent;
-     border: none;
-     cursor: pointer;
-     padding: 0;
-     box-sizing: border-box;
-     align-items: right;
-     transition: all .35s ease-in-out;
- }
-
- .toggle-button.open{
-    transition: all .5s ease-in-out;
-
- }
-
- .toggle-button:focus{
-     outline: none;
- }
-
- .toggle-button_line {
-     width: 30px;
-     height: 2px;
-     background: white;
- }
- .toggle-button.open .toggle-button_line.top{
-    transform: translateX(-10px);
-    transition: all .15s ease-in-out;
-     transform: rotate(45deg) translate(4px, 8px);
- }
-
- .toggle-button.open .toggle-button_line.bottom{
-    transform: translateX(-10px);
-    transition: all .15s ease-in-out;
-    transform: rotate(-45deg) translate(4px, -8px);
+.toggle-button {
+	position: absolute;
+	display: flex;
+	top: 1rem;
+	right: 1rem;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 25px;
+	width: 30px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	box-sizing: border-box;
+	align-items: right;
+	transition: all 0.35s ease-in-out;
 }
 
-.toggle-button .toggle-button_line.top{
-    transition: all .15s ease-in-out;
-    transform: rotate(-45deg) translate(px,px);
-
+.toggle-button.open {
+	transition: all 0.5s ease-in-out;
 }
 
-.toggle-button .toggle-button_line.bottom{
-    transition: all .15s ease-in-out;
-    transform: rotate(45deg) translate(px,px);
+.toggle-button:focus {
+	outline: none;
 }
 
+.toggle-button_line {
+	width: 30px;
+	height: 2px;
+	background: white;
+}
+.toggle-button.open .toggle-button_line.top {
+	transform: translateX(-10px);
+	transition: all 0.15s ease-in-out;
+	transform: rotate(45deg) translate(4px, 8px);
+}
 
- .toggle-button.open .toggle-button_line.middle-line{
-     
-    transform: translateX(-15px);
-    transition: all .40s ease-in-out;
-    background: transparent;
-    box-shadow: none;
- }
+.toggle-button.open .toggle-button_line.bottom {
+	transform: translateX(-10px);
+	transition: all 0.15s ease-in-out;
+	transform: rotate(-45deg) translate(4px, -8px);
+}
 
+.toggle-button .toggle-button_line.top {
+	transition: all 0.15s ease-in-out;
+	transform: rotate(-45deg) translate(px, px);
+}
+
+.toggle-button .toggle-button_line.bottom {
+	transition: all 0.15s ease-in-out;
+	transform: rotate(45deg) translate(px, px);
+}
+
+.toggle-button.open .toggle-button_line.middle-line {
+	transform: translateX(-15px);
+	transition: all 0.4s ease-in-out;
+	background: transparent;
+	box-shadow: none;
+}

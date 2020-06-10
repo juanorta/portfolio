@@ -1,14 +1,13 @@
-.navbar{
+.navbar {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    background-color:transparent;
+    background-color: transparent;
     height: 55px;
-    
 }
 
-.navigation{
+.navigation {
     position: fixed;
     display: flex;
     height: 100%;
@@ -21,17 +20,16 @@
     align-items: center;
 }
 
-.nav_logo a{
+.nav_logo a {
     padding: 0.5rem 1rem;
     position: absolute;
     left: 0;
     top: 0;
     color: white;
     font-size: 1.65rem;
-    
 }
 
-.nav_logo a:hover{
+.nav_logo a:hover {
     color: aqua;
     text-decoration: none;
 }
@@ -40,9 +38,9 @@
     flex: 1;
 }
 
-.nav_items{
+.nav_items {
     list-style: none;
-    margin:0;
+    margin: 0;
     padding: 0;
     display: flex;
     padding: 0 0.5rem;
@@ -50,36 +48,34 @@
     right: 0;
 }
 
-.nav_items li{
+.nav_items li {
     padding: 0 0.5rem;
     top: 0;
     right: 0;
-    
 }
-
 
 .nav_items {
     color: white;
     cursor: pointer;
 }
 
-.nav_items :hover{
+.nav_items :hover {
     color: aqua;
     text-decoration: none;
 }
 
-@media(max-width: 768px){
-    .nav_items{
+@media (max-width: 768px) {
+    .nav_items {
         display: none;
     }
 }
 
-@media (min-width: 769px){
-    .toggle{
+@media (min-width: 769px) {
+    .toggle {
         display: none;
     }
 }
 
-.nav_items  > .active{
+.nav_items > .active {
     color: aqua;
 }
