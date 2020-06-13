@@ -1,14 +1,56 @@
-.projects-header{
-    height: 100vh;
-    text-align: center;
-    background: rgb(9, 13, 15);
-    
-    
-  
-    
+.projects-header {
+	height: 100vh;
+	text-align: center;
+	background: rgb(9, 13, 15);
 }
 
-.projects-header h2{
-    padding-top: 5rem;
-    color: aqua
+.projects-header h2 {
+	padding-top: 5rem;
+	color: aqua;
+	padding-bottom: 5rem;
+}
+
+.projects-container1 .card {
+	width: 100%;
+	height: 30vh;
+	border: none;
+}
+
+.projects-container2 .card {
+	width: 100%;
+	height: 30vh;
+	border: none;
+}
+
+.project-title {
+	background-color: transparent;
+	margin-top: -1rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	color: white;
+}
+
+.picture {
+	background-color: transparent;
+	height: 92%;
+	width: 108%;
+	margin-left: -1rem;
+}
+
+.project-buttons {
+	background-color: transparent;
+	height: 130%;
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+.card-content-container {
+	background-color: grey;
+	height: 100%;
+}
+
+@media (max-width: 768px) {
+	.projects-header {
+		height: 250vh;
+	}
 }

@@ -1,0 +1,53 @@
+.project-view-container {
+	height: 0rem;
+}
+
+.project-title {
+	text-align: center;
+}
+
+.project-card-container .card {
+	display: none;
+	transition: 2s ease-in-out;
+}
+
+.project-card-container.open .card {
+	transform: translateY(-130%);
+	z-index: 9998;
+	display: block;
+}
+
+.project-content {
+	z-index: 9998;
+	background-color: green;
+	height: 100%;
+	z-index: 9998;
+}
+
+.gif-container {
+	position: absolute;
+	background-color: grey;
+	color: wheat;
+	height: 155%;
+
+	margin-bottom: 3rem;
+	width: 60%;
+	top: 0;
+	left: 0;
+}
+.about-container {
+	position: absolute;
+	background-color: rgb(9, 13, 15);
+	width: 40%;
+	height: 100%;
+	margin-left: 70%;
+	top: 0;
+	right: 0;
+}
+
+@media (max-width: 768px) {
+	.project-card-container.open .card {
+		transform: translateY(-340%);
+		z-index: 9998;
+	}
+}
