@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import ProjectView from '/Users/mac/Desktop/jobPortfolio/portfolio/src/Components/ProjectView/ProjectView';
+import Backdrop from '/Users/mac/Desktop/jobPortfolio/portfolio/src/Components/Backdrop/Backdrop';
 
 class Projects extends Component {
 	constructor(props) {
@@ -14,7 +15,7 @@ class Projects extends Component {
 		this.state = {
 			id: '',
 			title: '',
-			visible: false,
+			visible: this.props.viewState,
 		};
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -60,21 +61,35 @@ class Projects extends Component {
 		this.setState((prevState) => {
 			return { visible: !prevState.visible };
 		});
-		console.log('toggled');
+
+		this.props.click();
+
+		if (this.state.visible) {
+			this.props.backdrop();
+		}
 	};
 
 	render() {
+		console.log('projectView = ' + this.state.visible);
 		return (
 			<div className="projects-header" id="projects">
 				<h2>Projects</h2>
-				{this.state.visible ? (
-					<ProjectView
-						modalOpen={this.state.modalOpen}
-						projectStateID={this.state.id}
-						projectStateTitle={this.state.title}
-						buttonClick={this.buttonClick}
-					/>
-				) : null}
+
+				{/* if state.visible is true, show and send project data to ProjectView, else show nothing*/}
+				{/* also if state.visible is true, it will send the 'buttonClick' function to Backdrop.js */}
+				{this.state.visible
+					? [
+							<ProjectView
+								key="1"
+								modalOpen={this.state.modalOpen}
+								projectStateID={this.state.id}
+								projectStateTitle={this.state.title}
+								buttonClick={this.buttonClick}
+							/>,
+
+							<Backdrop key="2" buttonClick={this.buttonClick} />,
+					  ]
+					: null}
 
 				{/* wraps 1st row of projects */}
 				<Grid

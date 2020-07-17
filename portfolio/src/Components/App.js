@@ -32,7 +32,8 @@ class App extends Component {
 	backdropClickHandler = () => {
 		this.setState({ sideDrawerOpen: false });
 		this.setState({ projectViewOpen: false });
-		console.log('backdrop ' + this.state.sideDrawerOpen);
+		//console.log('backdrop ' + this.state.sideDrawerOpen);
+		console.log('backdrop off');
 	};
 
 	//closes side drawer when link is selected
@@ -52,7 +53,7 @@ class App extends Component {
 
 	render() {
 		//console.log(this.state.sideDrawerOpen);
-		console.log(this.state.projectViewOpen);
+		console.log('project = ' + this.state.projectViewOpen);
 		//variables used to send 'click' and 'close' to other components
 		let sideDrawerExitButton;
 		let backdrop;
@@ -66,6 +67,9 @@ class App extends Component {
 
 		if (this.state.projectViewOpen) {
 			backdrop = <Backdrop click={this.backdropClickHandler} />;
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'scroll';
 		}
 
 		return (
@@ -81,16 +85,15 @@ class App extends Component {
 				/>
 				<StickyLinks />
 				<ScrollArrow />
-				{backdrop}
 
 				<Home />
 				<ScrollNext />
 				<Stack />
 				{backdrop}
-				<Projects click={this.viewProjectClickHandler} />
-				<ProjectView
-					exitHandler={this.backdropClickHandler}
-					showProject={this.state.projectViewOpen}
+				<Projects
+					viewState={this.state.projectViewOpen}
+					backdrop={this.backdropClickHandler}
+					click={this.viewProjectClickHandler}
 				/>
 
 				<Contact />

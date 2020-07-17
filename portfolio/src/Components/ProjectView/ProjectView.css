@@ -1,8 +1,10 @@
 .project-wrapper {
+	position: absolute;
 	color: blue;
 	height: 20%;
 	width: 20%;
 	background-color: white;
 	margin-left: 50%;
 	margin-right: 50%;
+	z-index: 9998;
 }
