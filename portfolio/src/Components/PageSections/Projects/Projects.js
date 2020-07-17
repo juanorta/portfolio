@@ -65,7 +65,6 @@ class Projects extends Component {
 	};
 
 	render() {
-		//this.buttonClick = () => {};
 		return (
 			<div className="projects-header" id="projects">
 				<h2>Projects</h2>

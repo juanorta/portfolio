@@ -52,7 +52,7 @@ class Stack extends Component {
 				>
 					{/* Grid item wraps card item so that it can be divided into grid sections */}
 					{/* back end */}
-					<Grid item lg={3} sm={9} xs={9}>
+					<Grid item lg={3} md={4} sm={9} xs={9}>
 						{/* is the actual card and contains the card content*/}
 						<Card
 							className="card"
@@ -105,7 +105,7 @@ class Stack extends Component {
 					</Grid>
 
 					{/* front end */}
-					<Grid item lg={3} sm={9} xs={9}>
+					<Grid item lg={3} md={4} sm={9} xs={9}>
 						<Card
 							className="card"
 							style={{ backgroundColor: 'rgb(9, 13, 15)' }}
@@ -160,7 +160,7 @@ class Stack extends Component {
 					</Grid>
 
 					{/* services */}
-					<Grid item lg={3} sm={9} xs={9}>
+					<Grid item lg={3} md={4} sm={9} xs={9}>
 						<Card
 							className="card"
 							style={{ backgroundColor: 'transparent' }}

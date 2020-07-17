@@ -11,10 +11,13 @@ import Contact from './PageSections/Contact/Contact';
 import ScrollArrow from './ScrollArrow/ScrollArrow';
 import ScrollNext from './ScrollNext/ScrollNext';
 import StickyLinks from './StickyLinks/StickyLinks';
+import ProjectView from './ProjectView/ProjectView';
+import ProjectViewExit from './ProjectViewExit/ProjectViewExit';
 
 class App extends Component {
 	state = {
 		sideDrawerOpen: false,
+		projectViewOpen: false,
 	};
 
 	//sets the state of sideDrawerOpen to the opposite of the previous state
@@ -28,6 +31,7 @@ class App extends Component {
 	//closes the side drawer
 	backdropClickHandler = () => {
 		this.setState({ sideDrawerOpen: false });
+		this.setState({ projectViewOpen: false });
 		console.log('backdrop ' + this.state.sideDrawerOpen);
 	};
 
@@ -37,15 +41,30 @@ class App extends Component {
 		this.setState({ sideDrawerOpen: false });
 	};
 
+	//listens for 'View Project' button click
+	//sets state to opposite of previous state
+	viewProjectClickHandler = () => {
+		console.log('View Project clicked');
+		this.setState((prevState) => {
+			return { projectViewOpen: !prevState.projectViewOpen };
+		});
+	};
+
 	render() {
-		console.log(this.state.sideDrawerOpen);
+		//console.log(this.state.sideDrawerOpen);
+		console.log(this.state.projectViewOpen);
 		//variables used to send 'click' and 'close' to other components
 		let sideDrawerExitButton;
 		let backdrop;
 		let sideDrawerClick;
+		let exitButton;
 
 		//different calls to close drawer
 		if (this.state.sideDrawerOpen) {
+			backdrop = <Backdrop click={this.backdropClickHandler} />;
+		}
+
+		if (this.state.projectViewOpen) {
 			backdrop = <Backdrop click={this.backdropClickHandler} />;
 		}
 
@@ -67,7 +86,13 @@ class App extends Component {
 				<Home />
 				<ScrollNext />
 				<Stack />
-				<Projects />
+				{backdrop}
+				<Projects click={this.viewProjectClickHandler} />
+				<ProjectView
+					exitHandler={this.backdropClickHandler}
+					showProject={this.state.projectViewOpen}
+				/>
+
 				<Contact />
 			</div>
 		);

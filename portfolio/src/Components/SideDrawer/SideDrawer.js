@@ -2,6 +2,7 @@ import React from 'react';
 import './SideDrawer.css';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import DrawerToggleButton from './DrawerToggleButton';
+
 const sideDrawer = (props) => {
 	let drawerClasses = 'side-drawer';
 	if (props.show) {

@@ -1,81 +1,82 @@
 .navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    height: 55px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgb(9, 13, 15);
+	height: 55px;
+	z-index: 9999;
 }
 
 .navigation {
-    position: fixed;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    height: 55px;
-    padding: 0 1rem;
-    align-items: center;
+	position: fixed;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgb(9, 13, 15);
+	height: 55px;
+	padding: 0 1rem;
+	align-items: center;
 }
 
 .nav_logo a {
-    padding: 0.5rem 1rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: white;
-    font-size: 1.65rem;
+	padding: 0.5rem 1rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: white;
+	font-size: 1.65rem;
 }
 
 .nav_logo a:hover {
-    color: aqua;
-    text-decoration: none;
+	color: aqua;
+	text-decoration: none;
 }
 
 .spacer {
-    flex: 1;
+	flex: 1;
 }
 
 .nav_items {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    padding: 0 0.5rem;
-    top: 0;
-    right: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	padding: 0 0.5rem;
+	top: 0;
+	right: 0;
 }
 
 .nav_items li {
-    padding: 0 0.5rem;
-    top: 0;
-    right: 0;
+	padding: 0 0.5rem;
+	top: 0;
+	right: 0;
 }
 
 .nav_items {
-    color: white;
-    cursor: pointer;
+	color: white;
+	cursor: pointer;
 }
 
 .nav_items :hover {
-    color: aqua;
-    text-decoration: none;
+	color: aqua;
+	text-decoration: none;
 }
 
 @media (max-width: 768px) {
-    .nav_items {
-        display: none;
-    }
+	.nav_items {
+		display: none;
+	}
 }
 
 @media (min-width: 769px) {
-    .toggle {
-        display: none;
-    }
+	.toggle {
+		display: none;
+	}
 }
 
 .nav_items > .active {
-    color: aqua;
+	color: aqua;
 }
