@@ -17,7 +17,6 @@ class Projects extends Component {
 			visible: false,
 		};
 		this.handleChange = this.handleChange.bind(this);
-		//this.buttonClick = this.buttonClick.bind(this);
 	}
 
 	handleChange(event) {
