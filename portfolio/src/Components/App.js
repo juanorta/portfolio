@@ -52,6 +52,7 @@ class App extends Component {
 	};
 
 	render() {
+		document.body.style.overflowX = 'hidden';
 		//console.log(this.state.sideDrawerOpen);
 		console.log('project = ' + this.state.projectViewOpen);
 		//variables used to send 'click' and 'close' to other components
@@ -69,7 +70,8 @@ class App extends Component {
 			backdrop = <Backdrop click={this.backdropClickHandler} />;
 			document.body.style.overflow = 'hidden';
 		} else {
-			document.body.style.overflow = 'scroll';
+			document.body.style.overflowY = 'scroll';
+			document.body.style.overflowX = 'hidden';
 		}
 
 		return (
